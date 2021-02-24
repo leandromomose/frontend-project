@@ -1,1 +1,1 @@
-# frontend-project
+# fullstack-project-frontend
