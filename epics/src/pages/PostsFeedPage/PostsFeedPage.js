@@ -7,6 +7,7 @@ import {PostsFeedContainer, AddPostButton} from "./styled"
 import {Add} from "@material-ui/icons"
 import { useHistory } from "react-router"
 import {goToAddPost, goToPostDetail} from "../../routes/coordinator"
+import Loading from "../../components/Loading/Loading"
 
 
 const PostsFeedPage = () => {
@@ -31,7 +32,7 @@ const PostsFeedPage = () => {
     
     return(
         <PostsFeedContainer>
-            {postCards}
+            {postCards.length > 0 ? postCards : <Loading/>}
             <AddPostButton
                 color={"primary"}
                 onClick={() => goToAddPost(history)}

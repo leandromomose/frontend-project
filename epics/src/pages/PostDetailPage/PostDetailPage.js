@@ -5,6 +5,8 @@ import useProtectedPage from "../../hooks/useProtectedPage"
 import useRequestData from "../../hooks/useRequestData"
 import { ScreenContainer, PostContainer, PostImage } from "./styled"
 import Typography from "@material-ui/core/Typography"
+import Loading from "../../components/Loading/Loading"
+
 
 const PostDetailPage = () => {
     useProtectedPage()
@@ -13,7 +15,7 @@ const PostDetailPage = () => {
 
     return (
         <ScreenContainer>
-            {post &&
+            {post ?
                 <PostContainer>
                     <PostImage src={post.file} />
                     <Typography
@@ -33,7 +35,10 @@ const PostDetailPage = () => {
                     >
                         {post.date}
                     </Typography>
-                </PostContainer>}
+                </PostContainer>
+            : 
+                <Loading/>
+            }
         </ScreenContainer>
     )
 }
