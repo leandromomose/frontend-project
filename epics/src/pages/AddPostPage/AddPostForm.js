@@ -7,7 +7,7 @@ import {createPost} from "../../services/post"
 import CircularProgress from '@material-ui/core/CircularProgress'
 
 const AddPostForm = () => {
-  const [form, onChange, clear] = useForm({ subtitle: "", file: "", tagsIds: "", collectionId: "" })
+  const [form, onChange, clear] = useForm({ subtitle: "", file: "", tagsIds: [], collectionId: "" })
   const [isLoading, setIsLoading] = useState(false)
 
   const onSubmitForm = (event) => {
