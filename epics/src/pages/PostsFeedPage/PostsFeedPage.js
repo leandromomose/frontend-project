@@ -6,7 +6,7 @@ import {BASE_URL} from "../../constants/urls"
 import {PostsFeedContainer, AddPostButton} from "./styled"
 import {Add} from "@material-ui/icons"
 import { useHistory } from "react-router"
-import {goToAddPost} from "../../routes/coordinator"
+import {goToAddPost, goToPostDetail} from "../../routes/coordinator"
 
 
 const PostsFeedPage = () => {
@@ -14,8 +14,8 @@ const PostsFeedPage = () => {
     const history = useHistory()
     const posts = useRequestData([], `${BASE_URL}/image/all`)
 
-    const onClickCard = () => {
-
+    const onClickCard = (id) => {
+        goToPostDetail(history, id)
     }
 
     const postCards = posts.map((post) => {
@@ -24,7 +24,7 @@ const PostsFeedPage = () => {
                 key={post.id}
                 title={post.subtitle}
                 image={post.file}
-                onClick={onclickCard}
+                onClick={() => onClickCard(post.id)}
             />
         )
     })
