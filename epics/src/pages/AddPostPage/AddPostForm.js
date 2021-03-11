@@ -7,7 +7,7 @@ import {createPost} from "../../services/post"
 import CircularProgress from '@material-ui/core/CircularProgress'
 
 const AddPostForm = () => {
-  const [form, onChange, clear] = useForm({ subtitle: "", file: "", tagsIds: [], collectionId: "" })
+  const [form, onChange, clear] = useForm({ subtitle: "", file: "", tag: "", collection: "" })
   const [isLoading, setIsLoading] = useState(false)
 
   const onSubmitForm = (event) => {
@@ -24,7 +24,7 @@ const AddPostForm = () => {
             name={"subtitle"}
             value={form.subtitle}
             onChange={onChange}
-            label={'Sub-título'}
+            label={'Título'}
             variant={'outlined'}
             fullWidth
             required
@@ -42,8 +42,8 @@ const AddPostForm = () => {
             margin={'normal'}
           />
           <TextField
-            name={"tagsIds"}
-            value={form.tagsIds}
+            name={"tag"}
+            value={form.tag}
             onChange={onChange}
             label={'Hashtags'}
             variant={'outlined'}
@@ -52,8 +52,8 @@ const AddPostForm = () => {
             margin={'normal'}
           />
           <TextField
-            name={"collectionId"}
-            value={form.collectionId}
+            name={"collection"}
+            value={form.collection}
             onChange={onChange}
             label={'Coleção'}
             variant={'outlined'}
