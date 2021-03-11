@@ -11,7 +11,7 @@ import Loading from "../../components/Loading/Loading"
 const PostDetailPage = () => {
     useProtectedPage()
     const params = useParams()
-    const post = useRequestData({}, `${BASE_URL}/image/${params.id}`)
+    const post = useRequestData({}, `${BASE_URL}/post/${params.id}`)
 
     return (
         <ScreenContainer>
@@ -28,7 +28,7 @@ const PostDetailPage = () => {
                     <Typography
                         align={"center"}
                     >
-                        {post.author}
+                        {post.collection}
                     </Typography>
                     <Typography
                         align={"center"}

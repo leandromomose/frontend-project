@@ -13,7 +13,7 @@ import Loading from "../../components/Loading/Loading"
 const PostsFeedPage = () => {
     useProtectedPage()
     const history = useHistory()
-    const posts = useRequestData([], `${BASE_URL}/image/all`)
+    const posts = useRequestData([], `${BASE_URL}/post/all`)
 
     const onClickCard = (id) => {
         goToPostDetail(history, id)

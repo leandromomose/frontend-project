@@ -12,9 +12,9 @@ export const login = (body, clear, history, setRightButtonText, setIsLoading) =>
             goToPostsFeed(history)
             setRightButtonText("Logout")
         })
-        .catch((err) => {
+        .catch((error) => {
             setIsLoading(false)
-            alert(err.response.data.error)
+            alert(error.response.data.error)
         })
 }
 
@@ -28,8 +28,8 @@ export const signUp = (body, clear, history, setRightButtonText, setIsLoading) =
         goToPostsFeed(history)
         setRightButtonText("Logout")
     })
-    .catch((err) => {
+    .catch((error) => {
         setIsLoading(false)
-        alert(err.response.data.error)
+        alert(error.response.data.error)
     })
 }
