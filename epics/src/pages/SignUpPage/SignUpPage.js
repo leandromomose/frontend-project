@@ -1,5 +1,5 @@
 import React from "react"
-import logo from "../../assets/logo-foto.jpg"
+import logo from "../../assets/e-pics-logo2.png"
 import useUnprotectedPage from "../../hooks/useUnprotectedPage"
 import SignUpForm from "./SignUpForm"
 import { LogoImage, ScreenContainer } from "./styled"

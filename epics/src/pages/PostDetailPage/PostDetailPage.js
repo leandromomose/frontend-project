@@ -28,11 +28,13 @@ const PostDetailPage = () => {
                     <Typography
                         align={"center"}
                     >
+                        Collection:
                         {post.collection}
                     </Typography>
                     <Typography
                         align={"center"}
                     >
+                        Posted at:
                         {post.date}
                     </Typography>
                 </PostContainer>

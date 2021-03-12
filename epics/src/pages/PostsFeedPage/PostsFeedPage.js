@@ -34,10 +34,11 @@ const PostsFeedPage = () => {
         <PostsFeedContainer>
             {postCards.length > 0 ? postCards : <Loading/>}
             <AddPostButton
+                variant={"contained"}
                 color={"primary"}
                 onClick={() => goToAddPost(history)}
             >
-                <Add/>
+                Add Post
             </AddPostButton>
         </PostsFeedContainer>
     )

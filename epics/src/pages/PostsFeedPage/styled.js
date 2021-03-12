@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Fab from '@material-ui/core/Fab'
+import Button from '@material-ui/core/Button'
 
 export const PostsFeedContainer = styled.div`
   display: flex;
@@ -8,9 +8,9 @@ export const PostsFeedContainer = styled.div`
   margin: 30px;
 `
 
-export const AddPostButton = styled(Fab)`
+export const AddPostButton = styled(Button)`
   position: fixed !important;
-  right: 20px;
-  bottom: 20px;
+  right: 50px;
+  bottom: 60px;
   z-index: 3;
 `
