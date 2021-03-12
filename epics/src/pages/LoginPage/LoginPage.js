@@ -1,6 +1,6 @@
 import React from "react"
 import { LogoImage, ScreenContainer, SignUpButtonContainer } from "./styled"
-import logo from "../../assets/logo-foto.jpg"
+import logo from "../../assets/e-pics-logo2.png"
 import Button from "@material-ui/core/Button"
 import LoginForm from "./LoginForm"
 import { useHistory } from "react-router"
